@@ -53,7 +53,7 @@ min-height: 100px;
             	</select>
             </div>
             <div class="col-lg-2 kt-margin-b-10-tablet-and-mobile">
-            	<label>المحافظة المرسل لها:</label>
+            	<label>الاماره المرسل لها:</label>
             	<select id="city" name="city" onchange="" class="form-control kt-input" data-col-index="2">
             		<option value="">Select</option>
                 </select>

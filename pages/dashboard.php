@@ -31,7 +31,7 @@
           			<div class="kt-widget-19__title">
           				<div class="kt-widget-19__label">
                             <span id="total-income"></span>
-                           <small>الف</small>
+                           <small>AED</small>
                         </div>
           				<img class="kt-widget-19__bg"  src="./assets/media/misc/iconbox_bg.png" alt="bg"/>
           			</div>

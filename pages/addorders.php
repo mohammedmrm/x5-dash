@@ -85,7 +85,7 @@ require_once("config.php");
 				<label>ادخال حسب</label>
                 <select data-show-subtext="true" onchange="byupdate()" type="text" class="selectpicker  form-control dropdown-primary" name="by" id="by"  value="">
                   <option value='store'>الصفحه (البيج)</option>
-                  <option value='city'>المدينه</option>
+                  <option value='city'>الاماره</option>
                 </select>
                 <span id="branch_err" class="form-text text-danger"></span>
 		  </div>
@@ -164,13 +164,13 @@ require_once("config.php");
                <span id="order_no_err1" class="form-text text-danger"></span>
            </div>
 			<div class="form-group col-lg-2">
-				<label>المحافظة المرسل لها</label>
+				<label>الاماره المرسل لها</label>
 				<select  city="city"  onchange='getTowns($("#town1"),$("#city1").val())'  data-show-subtext="true" data-live-search="true" type="text" class="selectpicker  form-control dropdown-primary" name="city[]" id="city1"  value="">
                 </select>
                 <span id="city_err1"class="form-text text-danger"></span>
 			</div>
             <div class="form-group  col-lg-2">
-				<label>القضاء او المنطقه</label>
+				<label>المنطقه</label>
 				<select   town="town" data-lang="ar" data-language="ar" data-show-subtext="true" data-live-search="true" type="text" class="selectpicker  form-control dropdown-primary" name="town[]" id="town1"  value="">
 
                 </select>
@@ -431,7 +431,7 @@ require_once("config.php");
 			<form class="kt-form" id="addtownsForm">
 				<div class="kt-portlet__body">
 					<div class="form-group">
-						<label>المدينة</label>
+						<label>الاماره</label>
 						<select data-show-subtext="true" data-live-search="true" type="text" class="selectpicker form-control dropdown-primary" name="town_city" id="town_city"  value="">
                         </select>
                         <span class="form-text text-danger" id="town_city_err"></span>
@@ -641,7 +641,7 @@ function addMore(){
                 <span id="order_no_err`+number+`" class="form-text text-danger"></span>
             </div>
 			<div class="form-group col-lg-2">
-				<label>المحافظة</label>
+				<label>الاماره</label>
 				<select  city="city" onchange='`+`getTowns($("#town`+number+`"),$("#city`+number+`").val())`+`' city="city" data-show-subtext="true" data-live-search="true" type="text" class="selectpicker  form-control dropdown-primary" name="city[]" id="city`+number+`"  value="">
                   `+cities+`
                 </select>

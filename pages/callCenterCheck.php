@@ -168,7 +168,7 @@ legend
             	<input name="customer" onkeyup="" type="text" class="form-control kt-input" placeholder="" data-col-index="1">
             </div>
             <div class="col-lg-2 kt-margin-b-10-tablet-and-mobile">
-            	<label>المحافظة المرسل لها:</label>
+            	<label>الاماره المرسل لها:</label>
             	<select id="city" name="city" onchange="" class="form-control kt-input" data-col-index="2">
             		<option value="">Select</option>
                 </select>

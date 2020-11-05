@@ -190,12 +190,12 @@ hr {
               <div class="tab-pane active" id="recived" role="tabpanel">
                 <div class="row">
                   <div class="col-md-2">
-                    <label>سعر توصيل بغداد:</label>
+                    <label>سعر توصيل دبي:</label>
                     <input type="number" min="0" step="500" name="dev_price_b" class="form-control"/>
                   </div>
 
                   <div class="col-md-2">
-                    <label>سعر التوصيل باقي المحافظات</label>
+                    <label>سعر التوصيل باقي الامارات</label>
                     <input type="number" min="0" step="500" name="dev_price_o" class="form-control"/>
                   </div>
                 </div>

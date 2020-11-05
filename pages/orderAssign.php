@@ -98,7 +98,7 @@ legend
             	<input name="customer" onkeyup="getorders()" type="text" class="form-control kt-input" placeholder="" data-col-index="1">
             </div>
             <div class="col-lg-2 kt-margin-b-10-tablet-and-mobile">
-            	<label>المحافظة المرسل لها:</label>
+            	<label>الاماره المرسل لها:</label>
             	<select id="city" name="city" onchange="getorders();getTowns2($('#town'),$(this).val());" class="form-control kt-input" data-col-index="2">
             		<option value="">Select</option>
                 </select>
@@ -125,10 +125,10 @@ legend
                 </select>
             </div>
             <div class="col-lg-2 kt-margin-b-10-tablet-and-mobile">
-            	<label>بغداد او محافظات:</label>
+            	<label>دبي او محافظات:</label>
             	<select id="BOrO" name="BOrO" onchange="getorders()" class="form-control kt-input" data-col-index="2">
             		<option value="all">الكل</option>
-            		<option value="1">يغداد</option>
+            		<option value="1">دبي</option>
             		<option value="2">محافظات</option>
                 </select>
             </div>

@@ -212,7 +212,7 @@ legend
             	</select>
             </div>
             <div class="col-lg-2 kt-margin-b-10-tablet-and-mobile">
-            	<label>المحافظة المرسل لها:</label>
+            	<label>الاماره المرسل لها:</label>
             	<select id="city" name="city"  onchange="getTowns2($('#town'),$(this).val());" data-live-search="true" class="form-control kt-input" data-col-index="2">
             		<option value="">Select</option>
                 </select>
