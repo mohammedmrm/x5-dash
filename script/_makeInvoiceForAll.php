@@ -370,7 +370,7 @@ $header ='
                       <span align="right" style="color:#DC143C;">كشف حساب العميل</span><br />
                       '.
                       'عدد الطلبيات  الكلي: '.$total['orders'].'<br />'.
-                      'عدد طلبيات بغداد : '.$total['b_orders'].'<br />'.
+                      'عدد طلبيات دبي : '.$total['b_orders'].'<br />'.
                       'عدد طلبيات المحافظات : '.$total['o_orders'].
                     '</td>
                     <td style="text-align:center;" width="300" rowspan="5">

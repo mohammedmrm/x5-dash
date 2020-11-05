@@ -41,7 +41,7 @@ min-height: 100px;
             	</select>
             </div>
             <div class="col-lg-2 kt-margin-b-10-tablet-and-mobile">
-            	<label>الصفحه:</label>
+            	<label>الاسم التجاري:</label>
             	<select onchange="" data-show-subtext="true" data-live-search="true"  class="selectpicker form-control kt-input" id="store" name="store" data-col-index="7">
             		<option value="">Select</option>
             	</select>
@@ -179,7 +179,7 @@ min-height: 100px;
 			</ul>
         <input type="hidden" id="p" name="p" value="<?php if(!empty($_GET['p'])){ echo $_GET['p'];}else{ echo 1;}?>"/>
 		</nav>
-          <?php if($_SESSION['role'] == 1){?>
+          <?php if($_SESSION['role'] == 1 && 0==2){?>
           <fieldset><legend>تحديث تلقائي</legend>
           <div class="row kt-margin-b-20" id="autoUpdateDiv">
             <div class="col-lg-2 kt-margin-b-10-tablet-and-mobile">
@@ -333,7 +333,7 @@ $.ajax({
               '</select>'+
             '</td>'+
             '<td>'+this.status_name+'</td>'+
-            '<td>'+(this.customer_phone)+'</td>'+
+            '<td>'+this.customer_name+"<br />"+(this.customer_phone)+'</td>'+
             '<td>'+this.city+' - '+this.town+'</td>'+
             '<td>'+formatMoney(this.dev_price)+'</td>'+
             '<td>'+formatMoney(this.new_price)+'</td>'+

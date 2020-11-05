@@ -311,7 +311,7 @@ $header ='
                     <td  width="350" rowspan="4">
                     '.
                       'عدد الطلبيات  الكلي: '.$total['orders'].'<br />'.
-                      'عدد طلبيات بغداد : '.$total['b_orders'].'<br />'.
+                      'عدد طلبيات دبي : '.$total['b_orders'].'<br />'.
                       'عدد طلبيات المحافظات : '.$total['o_orders'].
                     '</td>
              </tr>

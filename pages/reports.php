@@ -200,7 +200,7 @@ legend
             	</select>
             </div>
             <div class="col-lg-2 kt-margin-b-10-tablet-and-mobile">
-            	<label>الصفحه:</label>
+            	<label>الاسم التجاري:</label>
             	<select onchange="" data-actions-box="true" data-show-subtext="true" data-live-search="true"  class="selectpicker form-control kt-input" id="store" name="store" data-col-index="7">
             		<option value="">Select</option>
             	</select>
@@ -349,7 +349,8 @@ legend
 	  						<tr>
 										<th>رقم الوصل</th>
 										<th>اسم وهاتف العميل</th>
-										<th>عنوان وهاتف المستلم</th>
+										<th>اسم وهاتف المستلم</th>
+										<th>عنوان المستلم</th>
 										<th>الحاله</th>
 										<th>تاريخ الادخال</th>
 										<th>مبلغ الوصل</th>
@@ -851,8 +852,8 @@ $.ajax({
        '<tr class="'+bg+'">'+
             '<td>'+this.order_no+icon+'</td>'+
             '<td>'+this.store_name+'<br />'+(this.client_phone)+'</td>'+
-            '<td>'+this.city+'/'+this.town+''+
-            '<br />'+(this.customer_phone)+'</td>'+
+            '<td>'+this.customer_name+'<br />'+(this.customer_phone)+'</td>'+
+            '<td>'+this.city+'/'+this.town+'</td>'+
             '<td>'+this.status_name+'<br /> ('+this.storage_status+')</td>'+
             '<td>'+date+'</td>'+
             '<td>'+formatMoney(this.price)+'</td>'+

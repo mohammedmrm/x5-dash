@@ -83,7 +83,7 @@ $query = "select orders.*,date_format(orders.date,'%Y-%m-%d') as dat,  order_sta
           count(order_no) as orders
           from orders
           left JOIN client_dev_price on client_dev_price.client_id = orders.client_id AND client_dev_price.city_id = orders.to_city
-          where store_id = ? and orders.confirm=1 and invoice_id = 0 and (order_status_id =4 or order_status_id = 6 or order_status_id = 5) 
+          where store_id = ? and orders.confirm=1 and invoice_id = 0 and (order_status_id =4 or order_status_id = 6 or order_status_id = 5)
           ";
           if($filter != ""){
             $sql .= $filter;
@@ -98,5 +98,5 @@ $client =getData($con,$sql,[$id]);
 $sql = "SELECT sum(if(type = 1,(price),0)) as total,sum(if(type = 1,price,-price)) as balance, client_id from loans where client_id=? GROUP by client_id ";
 $balance = getData($con,$sql,[$client[0]['client_id']]);
 
-echo json_encode(array($sql,$query,"success"=>$success,"data"=>$data,'pay'=>$res4,'balance'=>$balance[0]['balance']));
+echo json_encode(array("success"=>$success,"data"=>$data,'pay'=>$res4,'balance'=>$balance[0]['balance']));
 ?>

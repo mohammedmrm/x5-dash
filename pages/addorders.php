@@ -84,7 +84,7 @@ require_once("config.php");
 		  <div class="form-group col-lg-2">
 				<label>ادخال حسب</label>
                 <select data-show-subtext="true" onchange="byupdate()" type="text" class="selectpicker  form-control dropdown-primary" name="by" id="by"  value="">
-                  <option value='store'>الصفحه (البيج)</option>
+                  <option value='store'>الاسم التجاري</option>
                   <option value='city'>الاماره</option>
                 </select>
                 <span id="branch_err" class="form-text text-danger"></span>
@@ -97,7 +97,7 @@ require_once("config.php");
                 <span id="mainbranch_err" class="form-text text-danger"></span>
 			</div>
             <div class="form-group col-lg-2">
-				<label>الصفحه (البيج)</label>
+				<label>الاسم التجاري</label>
                 <select data-show-subtext="true" data-live-search="true" type="text" class="  form-control dropdown-primary" name="mainstore" id="mainstore"  value="">
 
                 </select>
@@ -119,19 +119,19 @@ require_once("config.php");
                 </select>
                 <span id="maincity_err" class="form-text text-danger"></span>
 			</div>
-            <div class="form-group col-lg-2">
+<!--            <div class="form-group col-lg-2">
 				<label> الشركه</label>
                 <select data-show-subtext="true" data-live-search="true" type="text" class="selectpicker form-control dropdown-primary" name="company" id="company"  value="">
                 </select>
                 <span  id="company_err"class="form-text  text-danger"></span>
-			</div>
+			</div>-->
             <div class="form-group col-lg-2">
-                <label> اضافه عميل و صفحه</label><br />
+                <label> اضافه عميل و واسم تجاري</label><br />
                 <input data-toggle="modal" data-target="#addClientModal" type="button" class="btn btn-primary" name="add_client" id="add_client" value="اضافة عميل و صفحه"/>
              </div>
             <div class="form-group col-lg-2">
-                <label> اضافه صفحه فقط</label><br />
-                <input data-toggle="modal" data-target="#addStoreModal" type="button" class="btn btn-success" name="add_client"  value="اضافه صفحه فقط"/>
+                <label> اضافه اسم تجاري فقط</label><br />
+                <input data-toggle="modal" data-target="#addStoreModal" type="button" class="btn btn-success" name="add_client"  value="اضافه اسم تجاري فقط"/>
             </div>
             <div class="form-group col-lg-2">
                 <label> اضافه منطقه</label><br />
@@ -147,7 +147,7 @@ require_once("config.php");
 				<span id="customer_name_err1" class="form-text text-danger"></span>
 			</div>-->
 			<div class="form-group col-lg-2" style="display:none;" >
-				<label>الصفحه (البيج)</label>
+				<label>الاسم التجاري</label>
 				<select store='store'   data-show-subtext="true" data-live-search="true" type="text" class="selectpicker  form-control dropdown-primary" name="store[]" id="store1"  value="">
 
                 </select>
@@ -182,8 +182,13 @@ require_once("config.php");
 				<span id="order_address_err1" class="form-text text-danger"></span>
 			</div>
             <div class="form-group  col-lg-2">
-				<label>رقم الهاتف المستلم</label>
-				<input  type="tel" phone="phone" style="direction: ltr !important;"  data-inputmask="'mask': '9999-999-9999'" value="" class="form-control sp" noseq="1" id="customer_phone1" name="customer_phone[]"/>
+				<label>اسم الزبون</label>
+				<input  type="text" customer_name="customer_name"    value="" class="form-control sp"  id="customer_name1" name="customer_name[]"/>
+				<span id="customer_name_err1"  class="form-text text-danger"></span>
+			</div>
+            <div class="form-group  col-lg-2">
+				<label>رقم الهاتف</label>
+				<input  type="tel" phone="phone" style="direction: ltr !important;"  data-inputmask="'mask': '9999-999-999'" value="" class="form-control sp" noseq="1" id="customer_phone1" name="customer_phone[]"/>
 				<span id="customer_phone_err1"  class="form-text text-danger"></span>
 			</div>
             <div class="form-group  col-lg-2">
@@ -309,7 +314,7 @@ require_once("config.php");
   						<span class="form-text  text-danger" id="client_name_err"></span>
   					</div>
   					<div class="form-group">
-  						<label>اسم الصفحه (البيج):</label>
+  						<label>الاسم التجاري:</label>
   						<input type="text" name="page" class="form-control" placeholder="">
   						<span class="form-text text-danger" id="page_err"></span>
   					</div>
@@ -388,7 +393,7 @@ require_once("config.php");
                           <span class="form-text text-danger" id="client_err"></span>
   					</div>
   					<div class="form-group">
-  						<label>الاسم الصفحة:</label>
+  						<label>الاسم التجاري:</label>
   						<input type="name" name="name" class="form-control"  placeholder="ادخل الاسم الكامل">
   						<span class="form-text  text-danger" id="Store_name_err"></span>
   					</div>
@@ -660,8 +665,13 @@ function addMore(){
 				<span id="order_address_err`+number+`" class="form-text text-danger"></span>
 			</div>
             <div class="form-group  col-lg-2">
+				<label>اسم الزبون</label>
+				<input  customer_name="customer_name"  type="text"  class="form-control sp" id="customer_name`+number+`" name="customer_name[]" value="" />
+				<span id="customer_name_err`+number+`" class="form-text text-danger"></span>
+			</div>
+            <div class="form-group  col-lg-2">
 				<label>رقم الهاتف</label>
-				<input  phone="phone" noseq="`+number+`" type="tel" style="direction: ltr !important;" data-inputmask="'mask': '9999-999-9999'" class="form-control sp" id="customer_phone`+number+`" name="customer_phone[]" value="" />
+				<input  phone="phone" noseq="`+number+`" type="tel" style="direction: ltr !important;" data-inputmask="'mask': '9999-999-999'" class="form-control sp" id="customer_phone`+number+`" name="customer_phone[]" value="" />
 				<span id="customer_phone_err`+number+`" class="form-text text-danger"></span>
 			</div>
             <div class="form-group  col-lg-2">
@@ -687,6 +697,10 @@ function addMore(){
 				<span id="check_err`+number+`"  class="form-text text-danger"></span>
 			</div>
             <div class="form-group  col-lg-1">
+              <label>حذف</label><br />
+              <button type="button" class="btn btn-danger" onclick="deleteOrder(`+number+`)"><span class="flaticon-delete"></span></button>
+            </div>
+            <div class="form-group  col-lg-1">
 				<label>تاريخ الزبون</label> <br />
 				<button type="button"  class="btn btn-clean btn-icon-lg" onclick="customerHistory(`+number+`)"><span class="fa fa-history"></span></button>
             </div>
@@ -694,10 +708,7 @@ function addMore(){
              <br />
                <div id="customerHistory`+number+`"></div>
             </div>
-            <div class="form-group  col-lg-1">
-              <label>حذف</label><br />
-              <button type="button" class="btn btn-danger" onclick="deleteOrder(`+number+`)"><span class="flaticon-delete"></span></button>
-            </div>
+
            </div>
            <input type="hidden" value="`+number+`" id="num" name="num[]"/>
            <input type='hidden' order='order' id="order_id`+number+`" value='' name='order_id[]'>

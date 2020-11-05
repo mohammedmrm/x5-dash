@@ -414,7 +414,7 @@ class MYPDF extends TCPDF {
               <td style="text-align:right;" width="200">'.$t['to'].'</td>
               <td  width="180">'.
                 'عدد الطلبيات  الكلي: '.$t['orders'].'<br />'.
-                'عدد طلبيات بغداد : '.$t['b_orders'].'<br />'.
+                'عدد طلبيات دبي : '.$t['b_orders'].'<br />'.
                 'عدد طلبيات المحافظات : '.$t['o_orders'].'<br />'.
               '</td>
               <td  width="150">التاريخ:'.date('Y-m-d').'</td>

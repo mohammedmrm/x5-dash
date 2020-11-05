@@ -66,7 +66,7 @@ legend
             	</select>
             </div>
             <div class="col-lg-2 kt-margin-b-10-tablet-and-mobile">
-            	<label>الصفحة (البيج):</label>
+            	<label>الاسم التجاري:</label>
             	<select onchange="getorders()" data-show-subtext="true" data-live-search="true"  class="selectpicker form-control kt-input" id="store" name="store" data-col-index="7">
             		<option value="">Select</option>
             	</select>
@@ -129,7 +129,7 @@ legend
             	<select id="BOrO" name="BOrO" onchange="getorders()" class="form-control kt-input" data-col-index="2">
             		<option value="all">الكل</option>
             		<option value="1">دبي</option>
-            		<option value="2">محافظات</option>
+            		<option value="2">باقي الامارات</option>
                 </select>
             </div>
             <div class="col-lg-2 kt-margin-b-10-tablet-and-mobile">
@@ -278,7 +278,7 @@ $.ajax({
             '<td>'+this.id+'</td>'+
             '<td>'+this.order_no+'</td>'+
             '<td>'+this.store_name+'<br />'+phone_format(this.client_phone)+'</td>'+
-            '<td>'+phone_format(this.customer_phone)+'</td>'+
+            '<td>'+this.customer_name+'<br />'+phone_format(this.customer_phone)+'</td>'+
             '<td>'+this.city+'/'+this.town+'<br />'+this.address+'</td>'+
             '<td>'+this.dev_comp_name+'</td>'+
             '<td>'+formatMoney(this.total_price)+'</td>'+
